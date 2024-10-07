@@ -1,0 +1,61 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightyellow;
+            color: darkgreen;
+            text-align: center;
+            padding: 50px;
+        }
+        input, select {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: lightgreen;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgreen;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number Operations</h1>
+    <form method="POST">
+        <input type="text" name="number" placeholder="Enter a number" required>
+        <select name="operation" required>
+            <option value="1">Even or Odd</option>
+            <option value="2">Reverse</option>
+            <option value="3">Sum of Digits</option>
+            <option value="4">Palindrome Check</option>
+            <option value="5">Factorial</option>
+            <option value="6">Sum of First n Numbers</option>
+            <option value="7">Sum of First n Even Numbers</option>
+            <option value="8">Sum of First n Odd Numbers</option>
+            <option value="9">First n Even Numbers</option>
+            <option value="10">First n Odd Numbers</option>
+            <option value="11">Prime Check</option>
+            <option value="12">First n Prime Numbers</option>
+            <option value="13">Squares of First n Numbers</option>
+            <option value="14">Cubes of First n Numbers</option>
+            <option value="15">All Operations</option>
+        </select>
+        <button type="submit">Calculate</button>
+    </form>
+    <h2>Result:</h2>
+    <p>{{ result|safe }}</p>
+</body>
+</html>
